@@ -17,6 +17,7 @@ import { useProducts } from "../../hooks/useProducts";
 import { searchResultBox } from "../../store/search";
 import NavProfile from "../ui/navProfile";
 import { getIsLoggedIn } from "../../store/users";
+import { getTitleCrumps } from "../../utils/breadCrumpsTitle";
 
 const HeaderMenu = () => {
   const isLoggedIn = useSelector(getIsLoggedIn());
@@ -271,7 +272,7 @@ const HeaderMenu = () => {
               {filterBurger.map((item, index) => (
                  <div key={index} className={styles.burgerBox_body_itemWrapper}>
                 <Link to={`/catalog/${item.toLowerCase()}`}>
-                  <button className={styles.burgerBox_body_item}>{item}</button>
+                  <button className={styles.burgerBox_body_item}>{getTitleCrumps(item)}</button>
                 </Link>
                 </div>
               ))}
