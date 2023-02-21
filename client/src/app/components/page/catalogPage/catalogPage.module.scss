@@ -1,0 +1,29 @@
+.wrapper {
+    background: #EEEEEE;
+    padding-bottom: 178px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1220px;
+}
+
+.catalog {
+
+    &_title {
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 100%;
+        color: #3E424B;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+}
+
+.BreadCrumps {
+    text-align: left;
+    margin-bottom: 50px;
+    margin-top: 106px;
+  }

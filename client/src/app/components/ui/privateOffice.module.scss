@@ -1,0 +1,385 @@
+.wrapper {
+    background: #eeeeee;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1220px;
+    display: flex;
+}
+
+.office {
+    &_avatar {
+        background: #F5F5F5;
+        width: 392px;
+        margin-left: 20px;
+        margin-top: 50px;
+        height: fit-content;
+
+        &_wrapper {
+            padding: 40px 50px 20px 40px;
+
+        }
+
+        &_contacts {
+            &_item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        &_pictureBlock {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 28px;
+
+            &_userInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &_title {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 150%;
+                color: #636B78;
+                text-align: left;
+            }
+
+            &_content {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 150%;
+                color: #3E424B;
+                text-align: left;
+            }
+        }
+
+        &_pictureBlock img {
+            height: 166px;
+            width: 166px;
+            border: #dea26d 1px solid;
+            border-radius: 10px;
+        }
+    }
+
+
+    &_historyOrdersBlock {
+        &_wrapperItem {
+            margin-bottom: 25px;
+        }
+
+        &_currentOrdersList {
+            padding: 30px 33px 38px 40px;
+
+            &_picture {
+                display: flex;
+                align-items: center;
+                width: 315px;
+            }
+        }
+
+        &_currentOrdersInfo {
+            border-top: 1px solid #D0D0D0;
+
+            &_wrapper {
+                background: #F5F5F5;
+                width: 804px;
+            }
+
+            display: flex;
+            padding: 30px 33px 38px 40px;
+
+            &_item {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &_item:last-child {
+                margin-left: 78px;
+            }
+        }
+
+
+        &_title {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 115%;
+            color: #3E424B;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        &_wrapper {
+            background: #F5F5F5;
+            width: 804px;
+        }
+
+        &_container {
+            padding: 30px 33px 38px 40px;
+            display: flex;
+            align-items: center;
+            background: inherit;
+
+            &_item {
+                display: flex;
+                flex-direction: column;
+                margin-left: 48px;
+
+                &_content {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 17px;
+                    line-height: 150%;
+                    color: #3E424B;
+                    text-align: left;
+                }
+
+                &_btn {
+                    background: transparent;
+                }
+
+                &_btn img {
+                    width: 20px;
+                }
+
+                &_title {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 150%;
+                    color: #636B78;
+                    text-align: left;
+                }
+            }
+
+            &_item:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &_adressBlock {
+        &_info {
+            display: flex;
+            text-align: left;
+
+            &_item_city label,
+            &_item_street label,
+            &_item_office label,
+            &_item_porch label,
+            &_item_floor label,
+            &_item_intercom label,
+            &_item_patronymic label {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 140%;
+                color: #636B78;
+            }
+
+            &_item_city input,
+            &_item_street input,
+            &_item_office input,
+            &_item_porch input,
+            &_item_floor input,
+            &_item_intercom input {
+                padding: 20px;
+                margin-bottom: 50px;
+                border: 1px solid #dea26d;
+                border-radius: 8px;
+                font-family: "Jost";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 115%;
+                color: #3E424B;
+            }
+
+            &_item_city input {
+                min-height: 25px;
+                width: 289px;
+            }
+
+            &_item_street input {
+                min-height: 25px;
+                width: 495px;
+            }
+
+            &_item_office input,
+            &_item_porch input,
+            &_item_floor input,
+            &_item_intercom input {
+                min-height: 25px;
+                width: 186px;
+            }
+
+            &_item_porch,
+            &_item_floor,
+            &_item_intercom,
+            &_item_street {
+                margin-left: 20px;
+            }
+
+        }
+
+        &_info:first-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &_header {
+        &_title {
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 115%;
+            color: #3E424B;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+    }
+
+    &_title {
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 100%;
+        color: #3E424B;
+        text-align: left;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_title img {
+        width: 40px;
+        height: 40px;
+    }
+
+    &_recipientBlock {
+        &_info {
+            display: flex;
+            text-align: left;
+
+            &_item_name label,
+            &_item_phone label,
+            &_item_email label,
+            &_item_patronymic label,
+            &_item_surname label {
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 140%;
+                color: #636B78;
+            }
+
+            &_item_name input,
+            &_item_phone input,
+            &_item_email input,
+            &_item_patronymic input,
+            &_item_surname input {
+                padding: 20px;
+                margin-bottom: 50px;
+                border: 1px solid #dea26d;
+                border-radius: 8px;
+                font-family: "Jost";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 115%;
+                color: #3E424B;
+            }
+
+            &_item_name input {
+                min-height: 25px;
+                width: 289px;
+            }
+
+            &_item_phone input {
+                min-height: 25px;
+                width: 186px;
+            }
+
+            &_item_email input {
+                min-height: 25px;
+                width: 289px;
+            }
+
+
+            &_item_phone,
+            &_item_email,
+            &_item_patronymic {
+                margin-left: 20px;
+            }
+        }
+
+
+    }
+}
+
+table {
+    width: 100%;
+}
+
+td img {
+    width: 103px;
+    height: 103px;
+    margin-right: 20px;
+
+}
+
+td {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #3E424B;
+    background: #F5F5F5;
+    border: none;
+    text-align: right;
+}
+
+td:first-child,
+th:first-child {
+    padding-left: 0;
+}
+
+th {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: #3E424B;
+    background: #F5F5F5;
+    border: none;
+    text-align: right;
+}
+th:first-child {
+    text-align: left;
+}
+.office_historyOrdersBlock_currentOrdersInfo_item>.office_historyOrdersBlock_container_item {
+    margin-left: 0;
+}
+.BreadCrumps {
+  text-align: left;
+  margin-bottom: 50px;
+  margin-top: 106px;
+}

@@ -1,0 +1,36 @@
+.wrapper {
+    background: #EEEEEE;
+    padding-top: 106px;
+    padding-bottom: 200px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1220px;
+}
+
+.promocodes_items {
+    background: #EEEEEE;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promocodes {
+    padding-top: 20px;
+
+
+    &_header {
+
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 100%;
+        color: #3E424B;
+        text-align: left;
+    }
+}
+.BreadCrumps {
+    text-align: left;
+    margin-bottom: 50px;
+    }

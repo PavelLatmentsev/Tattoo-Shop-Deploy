@@ -1,0 +1,33 @@
+.buttonWrapper {
+  position: relative;
+}
+
+.button {
+  display: block;
+  position: relative;
+
+  &_btn {
+    background: transparent;
+  }
+}
+
+.button_img:hover {
+  fill: #896a4c52;
+}
+.button_link:hover {
+  color:rgb(31, 24, 21);
+}
+.button_link {
+  z-index: 2;
+  line-height: 150%;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 18px 63px 62px 64px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,150 @@
+.sliderList_box {
+  background: #050402;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1220px;
+  color: #ffffff;
+  position: relative;
+  height: 700px;
+}
+
+.sliderList {
+  background: no-repeat center/cover
+    url("../../assets/background/sliderBackground.png");
+  height: 54vh;
+  width: 95vh;
+  &_itemFirst {
+    height: 54vh;
+    width: 95vw;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/gallery/1.jpg");
+  }
+
+  &_block {
+    width: 594px;
+    padding-top: 110px;
+
+    &_title {
+      font-family: "Forum";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 75px;
+      line-height: 100%;
+      color: #bb8c5f;
+      text-align: start;
+    }
+
+    &_description {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 35px;
+      color: #faf6f2;
+      margin-top: 30px;
+      width: 431px;
+      text-align: start;
+    }
+  }
+}
+
+.sliderList_blockBtn {
+  margin-top: 60px;
+  text-align: initial;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  overflow: visible !important;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: visible !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: visible !important;
+}
+
+.swiper-container {
+  padding-top: 100px;
+}
+
+.itemSecond {
+  background-image: url("../../assets/gallery/9.jpg");
+}
+.itemThird {
+  background-image: url("../../assets/gallery/6.jpg");
+}
+.itemFour {
+  background-image: url("../../assets/gallery/13.jpg");
+}
+.itemFive {
+  background-image: url("../../assets/gallery/8.jpg");
+  background-size: contain;
+}
+
+.itemSix {
+  background-image: url("../../assets/gallery/14.jpg");
+  background-size: auto;
+}
+.itemSeven {
+  background-image: url("../../assets/gallery/11.jpg");
+}
+.itemEight {
+  background-image: url("../../assets/gallery/17.jpg");
+}
+.itemNine {
+  background-image: url("../../assets/gallery/7.jpg");
+  background-size: contain;
+}
+.itemTen {
+  background-image: url("../../assets/gallery/19.png");
+}
+.itemEleven {
+  background-image: url("../../assets/gallery/20.jpg");
+}
+.itemTwelve {
+  background-image: url("../../assets/gallery/21.jpg");
+}
+.itemThirteen {
+  background-image: url("../../assets/gallery/25.jpg");
+}
+
+.itemFourTeen {
+  background-image: url("../../assets/gallery/27.jpg");
+  background-size: contain;
+}
+
+.itemFifTeen {
+  background-image: url("../../assets/gallery/28.jpg");
+}
+
+// .itemSixteen {
+//   background-image: url("../../assets/gallery/25.jpg");
+// }

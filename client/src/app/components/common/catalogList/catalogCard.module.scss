@@ -1,0 +1,27 @@
+.catalogCard {
+    height: 350px;
+    width: 500px;
+    position: relative;
+    background: #F5F5F5;
+    margin-bottom: 50px;
+    border-radius:10px;
+
+    &_title {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 130%;
+        color: #BB8C5F;
+
+
+    }
+}
+.catalogCard:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease 0s;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.10);
+}

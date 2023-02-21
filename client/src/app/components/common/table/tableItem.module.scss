@@ -1,0 +1,80 @@
+.tableItem {
+
+    &_editBtn,
+    &_updateBtn,
+    &_delBtn {
+        background: transparent;
+    }
+
+    &_editBtn img,
+    &_delBtn img,
+    &_updateBtn img {
+        height: 30px;
+        width: 30px;
+    }
+
+    &_id input,
+    &_name input,
+    &_price input,
+    &_sales input,
+    &_url input,
+    &_category input,
+    &_brands input {
+        height: 35px;
+        border-radius: 6px;
+        text-align: center;
+        background: #de8d44;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 115%;
+        color: #3E424B;
+    }
+
+    &_price input {
+        width: 80px;
+    }
+
+    &_absent,
+    &_hit,
+    &_novelty,
+    &_promotion,
+    &_popular,
+    &_prof,
+    &_builder,
+    &_starter {
+        zoom: 1.4;
+    }
+
+    &_sales input {
+        width: 50px;
+        background: none;
+        background: transparent
+    }
+
+    &_index {
+        text-align: center;
+    }
+}
+
+input:disabled {
+    background: #cbc2b8;
+}
+
+.colProduct {
+    padding: 10px 20px;
+    background: #e3dfdce5;
+}
+
+.rowProduct:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.rowProduct:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+.rowProduct td:last-child {
+    border-right: none;
+}
