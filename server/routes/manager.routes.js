@@ -24,4 +24,21 @@ router.post("/", async(req,res) =>{
 
 })
 
+router.delete("/:managerId", async (req, res) => {
+    try {
+      const { managerId } = req.params;
+      const removeManager = await Manager.findById(managerId);
+      if (removeManager) {
+        await removeManager.remove();
+        return res.send(null);
+      } else {
+        res.status(401).json({ message: "Manager dont remove from base" });
+      }
+    } catch (e) {
+      res.status(500).json({
+        message: "На сервере произошла ошибка. Попробуйте позже",
+      });
+    }
+  });
+
 module.exports=router

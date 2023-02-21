@@ -10,6 +10,11 @@ const managerService = {
     create: async (payload) => {
         const { data } = await httpService.post(managerEndpoint, payload);
         return data;
+    },
+    remove: async (id) => {
+        const { data } = await httpService.delete(managerEndpoint + id);
+        return data;
     }
+
 };
 export default managerService;

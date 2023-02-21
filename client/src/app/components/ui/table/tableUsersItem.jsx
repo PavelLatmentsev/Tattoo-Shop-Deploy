@@ -5,10 +5,11 @@ import editIcon from "../../../assets/icons/navigation/edit.png";
 import delproduct from "../../../assets/icons/navigation/delproduct.png";
 import updateIcon from "../../../assets/icons/navigation/update.png";
 import styles from "./tableUsersItem.module.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeUser, updateUser } from "../../../store/users";
-import { addManager } from "../../../store/manager";
+import { addManager, getManagerList, removeManagerList } from "../../../store/manager";
 const TableUsersItem = ({ user, index }) => {
+    const managerList = useSelector(getManagerList());
     const dispatch = useDispatch();
     const [userData, setUserData] = useState(user);
     const [disabledItem, setDisabledItem] = useState(true);
@@ -24,12 +25,15 @@ const TableUsersItem = ({ user, index }) => {
         }
     };
     const getUpdateUser = (userData) => {
-        dispatch(updateUser(userData));
-        setDisabledItem(true);
-        if (userData.manager) {
-            dispatch(addManager({ name: userData.name, email: userData.email, image: userData.image, phone: userData.phone, manager: userData.manager }));
-        }
-    };
+        const findManager = managerList.find(item => item.email === userData.email);
+         if (findManager && !userData.manager) {
+             dispatch(removeManagerList(findManager._id));
+         } else if (!findManager && userData.manager) {
+             dispatch(addManager({ name: userData.name, email: userData.email, image: userData.image, phone: userData.phone, manager: userData.manager }));
+         }
+         dispatch(updateUser(userData));
+         setDisabledItem(true);
+     };
     return (
         <tr className={styles.row}>
             <td className={styles.tableItem_index + " " + styles.col}><div>{index + 1}</div></td>

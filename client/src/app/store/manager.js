@@ -22,13 +22,19 @@ const managerSlice = createSlice({
         },
         createManager(state, action) {
             state.entities.push(action.payload);
+        },
+        removeManager: (state, action) => {
+            state.entities = state.entities.filter(
+                (item) => item._id !== action.payload
+            );
         }
+
     }
 }
 );
 
 const { reducer: managerReducer, actions } = managerSlice;
-const { managerRequested, managerRecived, managerRequestFailed, createManager } = actions;
+const { managerRequested, managerRecived, managerRequestFailed, createManager, removeManager } = actions;
 
 export const loadManagerList = () => async (dispatch) => {
     dispatch(managerRequested());
@@ -44,6 +50,17 @@ export const addManager = (payload) => async (dispatch) => {
     try {
         const { content } = await managerService.create(payload);
         dispatch(createManager(content));
+    } catch (error) {
+        dispatch(managerRequestFailed(error.message));
+    }
+};
+export const removeManagerList = (id) => async (dispatch) => {
+    dispatch(managerRequested());
+    try {
+        const { content } = await managerService.remove(id);
+        if (!content) {
+            dispatch(removeManager(id));
+        }
     } catch (error) {
         dispatch(managerRequestFailed(error.message));
     }
