@@ -94,7 +94,7 @@ const AdminBlock = () => {
                 <div className={styles.BreadCrumps}>
                 <Breadcrumps/>
                 </div>
-                    <h1 className={styles.adminBlock_title}>Шалман Администратора</h1>
+                    <h1 className={styles.adminBlock_title}>Кабинет Администратора</h1>
                     <h1 className={styles.adminBlock_title}>Список пользователей</h1>
                     <table>
                         <TableUsers users={usersCrop} />
@@ -120,7 +120,7 @@ const AdminBlock = () => {
                         <table>
                             <Table products={productsCrop} isBaseProdacts={true} />
                         </table>
-                        <div className={styles.adminBlock_pagination}>
+                        <div className={styles.adminBlock_pagination + " " + styles.paginationFooter}>
                             <Pagination
                                 onPageChange={heandlePageChange}
                                 pageSize={pageSize}
