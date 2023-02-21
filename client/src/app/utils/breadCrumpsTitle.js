@@ -55,5 +55,7 @@ export const getTitleCrumps = (crumb, product) => {
     return "Админка";
   } else if (product && crumb === product._id) {
     return product.name;
+  } else {
+    return crumb;
   }
 };

@@ -272,7 +272,7 @@ const HeaderMenu = () => {
               {filterBurger.map((item, index) => (
                  <div key={index} className={styles.burgerBox_body_itemWrapper}>
                 <Link to={`/catalog/${item.toLowerCase()}`}>
-                  <button className={styles.burgerBox_body_item}>{getTitleCrumps(item)}</button>
+                  <button className={styles.burgerBox_body_item}>{getTitleCrumps(item.toLowerCase())}</button>
                 </Link>
                 </div>
               ))}
