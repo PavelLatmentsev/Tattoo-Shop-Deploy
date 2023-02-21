@@ -6,17 +6,12 @@ import styles from "./adminBlock.module.scss";
 import Table from "../common/table/table";
 import Pagination from "../common/pagination";
 import { paginate } from "../../utils/paginate";
-import useMockData from "../../utils/mockData";
 import TableUsers from "./table/tableUsers";
 import { useSelector } from "react-redux";
 import { getUsersList } from "../../store/users";
 import Breadcrumps from "../common/breadcrumps";
 
 const AdminBlock = () => {
-    const { error, initialize, progress, status } = useMockData();
-    const heandleClick = (params) => {
-        initialize();
-    };
     const users = useSelector(getUsersList());
     const countUser = users.length;
     const { products, count, defaultState } = useProducts();
@@ -136,18 +131,6 @@ const AdminBlock = () => {
                                 onStartChange={heandlerStartPaginationChange}
                                 onEndChange={heandlerEndPaginationChange}
                             />
-                        </div>
-                        <div className={styles.adminBlock_mockData}>
-                            <h1>Main Page</h1>
-                            <h3>Инициализация данных в FireBase</h3>
-                            <ul>
-                                <li>Status: {status}</li>
-                                <li>Progress: {progress}</li>
-                                {error && <li>error:{error}</li>}
-                            </ul>
-                            <button onClick={heandleClick} className={styles.adminBlock_mockData_btn}>
-                                Инициализировать
-                            </button>
                         </div>
                     </div>) : "Loading"}
 
