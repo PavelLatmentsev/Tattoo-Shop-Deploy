@@ -107,7 +107,7 @@ const HelpPage = () => {
               работать — задача тату-мастера.
             </p>
             <div className={styles.blockImageInfo}></div>
-            <h1 className={styles.helpPage_header} name="place-name">
+            <h1 className={styles.helpPage_header + " " + styles.advancedPadding} name="place-name">
               Как правильно выбрать место для ТАТУ
             </h1>
             <p className={styles.helpPage_header_info}>
@@ -410,7 +410,7 @@ const HelpPage = () => {
               знать, какие виды тату машинок существуют на современном рынке и в
               чем их отличия.
             </p>
-            <h3 className={styles.helpPage_header} name="FAQ-name">Частые вопросы:</h3>
+            <h3 className={styles.helpPage_header + " " + styles.advancedPadding} name="FAQ-name">Частые вопросы:</h3>
             <ul className={styles.helpPage_header_info + " " + styles.list}>
               <li className={styles.helpPage_header_info_item}>
                 Почему важно правильно выбрать «свою» тату машинку?
@@ -454,7 +454,7 @@ const HelpPage = () => {
             </p>
           </div>
           <div className={styles.blockImageInfo_machinesChoice}></div>
-          <h1 className={styles.helpPage_header} name="choice-name">
+          <h1 className={styles.helpPage_header + " " + styles.advancedPadding} name="choice-name">
             Какие бывают тату машинки?
           </h1>
           <p className={styles.helpPage_header_info}>
@@ -512,11 +512,11 @@ const HelpPage = () => {
             домашней тату машинки поможет разобраться в принципе работы
             профессиональной и её устройстве.
           </p>
-          <h1 className={styles.helpPage_header}>Индукционные тату машинки: принцип работы и назначение</h1>
+          <h1 className={styles.helpPage_header + " " + styles.advancedPadding}>Индукционные тату машинки: принцип работы и назначение</h1>
           <p className={styles.helpPage_header_info}>Начинаем изучать виды тату машинок с индукционной тату машинки. В ней весь механизм действий держится на принципе электромагнитной индукции. Катушки создают магнитное поле, которое раскачивает боек, а к нему крепится тату игла. Здесь важный элемент — это пружина, она отвечает за стабилизацию движения иглы.
 
 Важно учесть то, что индукции не универсальны, в отличие от роторов, и именно это — главное отличие между этими категориями тату машинок. Индукция всегда заточена под конкретную задачу — контур или закрас, и именно это и позволяет ей работать максимально эффективно. В связи с этим индукционные тату машинки делятся на лайнеры и шейдеры, и ниже мы расскажем, чем отличаются тату машинки для контура и закраса. А более подробно о тех, и других мы уже писали в нашей статье.</p>
-<h1 className={styles.helpPage_header} name="inductione-name">Виды индукционных тату машинок</h1>
+<h1 className={styles.helpPage_header + " " + styles.advancedPadding} name="inductione-name">Виды индукционных тату машинок</h1>
 <h1 className={styles.helpPage_headerSubtitle}>Контурные (лайнеры)</h1>
 <p className={styles.helpPage_header_info}>Тату машинка для контура понадобится вам для прорисовки линий. Делает она это быстро и в один проход за счет за счет облегченного бойка и высокого подъема пружины, поэтому и тату краска вбивается ровно и четко.
 
@@ -582,12 +582,12 @@ const HelpPage = () => {
                 </SwiperSlide>
               </Swiper>
 
-<h1 className={styles.helpPage_header} name="rotor-name">Роторные тату машинки</h1>
+<h1 className={styles.helpPage_header + " " + styles.advancedPadding} name="rotor-name">Роторные тату машинки</h1>
 <p className={styles.helpPage_header_info}>Теперь переходим к роторной тату машинке и начнем с принципа работы. В его основе — мотор, который преобразует вращательное движение роторного двигателя в поступательное движение иглы. Вращения мотора и эксцентрика имеют разные оси, за счет чего движение и становится вертикальным.
 </p>
 <p className={styles.helpPage_header_info}>В самом простом типе роторной машинки Direct Drive («Директ», «Поворотник») движение на иглу передается сразу же с эксцентрика, а в других типах присутствуют дополнительные механизмы, которые стабилизируют движение иглы, исключая горизонтальные колебания, возникающие во время передачи вращательного движения.</p>
 <p className={styles.helpPage_header_info}>Важное преимущество ротора — его универсальность. В отличие от индукций, в случае с которыми для работы вам потребуется сразу две — тату машинка для контура и закраса, один ротор выполнит и те, и другие. Благодаря использованию различных механизмов стабилизации иглы, возрастает эффективность роторных тату машинок в контурных работах. Также некоторые роторы имеют различный или регулируемый строк (ход иглы). Длинный ход (более 4 мм.) больше подходит для линий, короткий (1,8 - 2,5 мм.) для плавных переходов и теней, а средний (3,5 - 4 мм.) считается универсальным и подходит для всех типов работ. О других важных моментах, а также плюсах и минусах роторов мы писали в этой статье. А сейчас расскажем, какие же существуют виды роторных тату машинок.</p>
-<h1 className={styles.helpPage_header}>Виды роторных тату машинок</h1>
+<h1 className={styles.helpPage_header + " " + styles.advancedPadding}>Виды роторных тату машинок</h1>
 <h1 className={styles.helpPage_headerSubtitle}>Ручки</h1>
 <p className={styles.helpPage_header_info}>Безоговорочные лидеры продаж не только среди роторных, но и всех тату машинок в целом. Они не только универсальны, но и удобны, и это связано с особенностями конструкции. Мотор расположен внутри корпуса ручки (чаще всего вдоль).
 
@@ -639,7 +639,7 @@ const HelpPage = () => {
                 </SwiperSlide>
               </Swiper>
               <div className={styles.helpPage_checkbox}>
-<h1 className={styles.helpPage_header}>Чек-лист при выборе тату машинки
+<h1 className={styles.helpPage_header + " " + styles.advancedPadding}>Чек-лист при выборе тату машинки
 </h1>
 <h1 className={styles.helpPage_headerSubtitle}>Бюджет</h1>
 <p className={styles.helpPage_header_info}>В первую очередь определитесь, какой бюджет вы готовы выделить на покупку тату машинки. Так вы сразу сможете понять, в какой ценовой категории ее искать.</p>
