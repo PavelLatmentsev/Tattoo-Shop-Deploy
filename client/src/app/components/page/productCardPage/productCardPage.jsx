@@ -86,7 +86,6 @@ const ProductCardPage = ({ productCard }) => {
               ) : (
                 <Loader />
               )}
-              ;
               <div className={styles.productCardPage_header}>
                 <div className={styles.productCardPage_header_imageBlock}>
                   <img
