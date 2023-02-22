@@ -1,23 +1,11 @@
 import React, { useState } from "react";
 import styles from "./promocodeCard.module.scss";
-import NavButton from "../../common/uniButton";
 import PropTypes from "prop-types";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const PromocodeCard = ({ card }) => {
-    const initTitle = "Скопировать промокод";
-    const initColor = "#F5F5F5";
-    const [titleInfo, setTitleInfo] = useState(initTitle);
-    const [colorFill, setColorFill] = useState(initColor);
-    const heandleClick = () => {
-        navigator.clipboard.writeText(`${card.promocode}`);
-        if (titleInfo === "Скопировано!" && colorFill === "#e6e75e") {
-            setTitleInfo(initTitle);
-            setColorFill(initColor);
-        } else {
-            setTitleInfo("Скопировано!");
-            setColorFill("#e6e75e");
-        }
-    };
+const [copy, setCopy] = useState(false);
+console.log(copy);
     return (
         <div className={styles.promocodeCard}>
             <div className={styles.flexImg_wrapper}>
@@ -29,7 +17,9 @@ const PromocodeCard = ({ card }) => {
             </div>
             <div className={styles.flexBtn_wrapper}>
                 <div className={styles.promocodeCard_btn}>
-                    <NavButton fill={colorFill} color="#BB8C5F" title= {titleInfo} onChange={heandleClick} />
+                    <CopyToClipboard text = {card.promocode} onCopy={() => setCopy(true)}>
+                        <button className={styles.promocodeBtn + " " + (copy ? styles.activeCopy : "") }>{copy ? "Скопировано" : "Скопировать"}</button>
+                    </CopyToClipboard>
                 </div>
             </div>
         </div>

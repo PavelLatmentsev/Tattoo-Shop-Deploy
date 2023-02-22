@@ -16,6 +16,7 @@ const AboutPage = () => {
   const handleSubmit = (commentData) => {
     if (currentUserData) {
       dispatch(addReview({ ...commentData, image: currentUserData.image, name: currentUserData.name }));
+      history.push("/");
     } else {
       history.push("/login");
     }
