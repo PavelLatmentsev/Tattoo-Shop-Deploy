@@ -82,7 +82,7 @@ const PrivateOffice = () => {
                         <h1 >Личный кабинет</h1>
                         <div>
                             <button onClick={heandlerEditItem} className={styles.tableItem_editBtn}><img src={editIcon} alt="editIcon" /></button>
-                            {!disabledItem ? <button onClick={ () => [dispatch(updateUser(personalData)), setDisabledItem(prevState => !prevState)]} className={styles.tableItem_updateBtn}><img src={updateIcon} alt="update" /></button> : null}
+                            {!disabledItem ? <button onClick={() => dispatch(updateUser(personalData))} className={styles.tableItem_updateBtn}><img src={updateIcon} alt="update" /></button> : null}
                         </div>
                     </div>
 
@@ -179,7 +179,7 @@ const PrivateOffice = () => {
                                         </div>
                                         <div className={styles.office_historyOrdersBlock_container_item}>
                                             <span className={styles.office_historyOrdersBlock_container_item_title}>Адрес</span>
-                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{"г. " + currentUser.city + ", ул. " + currentUser.street + ", д. " + currentUser.office + ", под. " + currentUser.porch + ", эт. " + currentUser.floor + ", код " + currentUser.intercom}</span>
+                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{"г. " + `${currentUser.city ? currentUser.city : "Не указано"}` + ", ул. " + `${currentUser.street ? currentUser.street : "Не указано"}` + ", д. " + `${currentUser.office ? currentUser.office : "Не указано"}` + ", под. " + `${currentUser.porch ? currentUser.porch : "Не указано"}` + ", эт. " + `${currentUser.floor ? currentUser.floor : "Не указано"}` + ", код " + `${currentUser.intercom ? currentUser.intercom : "Не указано"}`}</span>
                                         </div>
                                         <div className={styles.office_historyOrdersBlock_container_item}>
                                             <span className={styles.office_historyOrdersBlock_container_item_title}>Сумма заказа</span>
@@ -190,15 +190,15 @@ const PrivateOffice = () => {
                                         <h1 className={styles.office_historyOrdersBlock_title}>Контактное лицо</h1>
                                         <div className={styles.office_historyOrdersBlock_container_item}>
                                             <span className={styles.office_historyOrdersBlock_container_item_title}>ФИО</span>
-                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{currentUser.name + " " + currentUser.surname + " " + currentUser.patronymic || "Не указан "}</span>
+                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{`${order.name || currentUser.name || "Не указано"}` + " " + `${order.surname || currentUser.surname || "Не указано"}` + " " + `${currentUser.patronymic ? currentUser.patronymic : "Не указано"}` || "Не указан "}</span>
                                         </div>
                                         <div className={styles.office_historyOrdersBlock_container_item}>
                                             <span className={styles.office_historyOrdersBlock_container_item_title}>Телефон</span>
-                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{currentUser.phone || "Не указан "}</span>
+                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{order.phone || currentUser.phone || "Не указан "}</span>
                                         </div>
                                         <div className={styles.office_historyOrdersBlock_container_item}>
                                             <span className={styles.office_historyOrdersBlock_container_item_title}>Почта</span>
-                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{currentUser.email || "Не указан "}</span>
+                                            <span className={styles.office_historyOrdersBlock_container_item_content}>{order.email || currentUser.email || "Не указан "}</span>
                                         </div>
 
                                     </div>

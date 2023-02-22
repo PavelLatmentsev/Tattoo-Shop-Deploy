@@ -45,29 +45,29 @@ const Order = () => {
         totalQuantity: quantity
     };
     const registerUserData = currentUser ? {
-        city: currentUser ? currentUser.city : "",
+        city: currentUser.city ? currentUser.city : "",
         confirm: false,
         sale: promoSale,
         delivery: "",
-        email: currentUser ? currentUser.email : "",
-        floor: currentUser ? currentUser.floor : "",
-        image: currentUser ? currentUser.image : "",
-        intercom: currentUser ? currentUser.intercom : "",
-        licence: currentUser ? currentUser.licence : "",
-        name: currentUser ? currentUser.name : "",
-        numData: currentUser ? currentUser.numData : "",
-        office: currentUser ? currentUser.office : "",
+        email: currentUser.email ? currentUser.email : "",
+        floor: currentUser.floor ? currentUser.floor : "",
+        image: currentUser.image ? currentUser.image : "",
+        intercom: currentUser.intercom ? currentUser.intercom : "",
+        licence: currentUser.licence ? currentUser.licence : "",
+        name: currentUser.name ? currentUser.name : "",
+        numData: currentUser.numData ? currentUser.numData : "",
+        office: currentUser.office ? currentUser.office : "",
         orderId: nanoid(),
         userId: currentUser._id,
-        patronymic: currentUser ? currentUser.patronymic : "",
+        patronymic: currentUser.patronymic ? currentUser.patronymic : "",
         payment: "",
-        phone: currentUser ? currentUser.phone : "",
-        porch: currentUser ? currentUser.porch : "",
+        phone: currentUser.phone ? currentUser.phone : "",
+        porch: currentUser.porch ? currentUser.porch : "",
         products: goodsStamp,
-        sex: currentUser ? currentUser.sex : "",
-        street: currentUser ? currentUser.street : "",
+        sex: currentUser.sex ? currentUser.sex : "",
+        street: currentUser.street ? currentUser.street : "",
         sum: totalSum - promoSale,
-        surname: currentUser ? currentUser.surname : "",
+        surname: currentUser.surname ? currentUser.surname : "",
         totalQuantity: quantity
 
     } : guestData;
@@ -77,8 +77,9 @@ const Order = () => {
             setOrderData((prevState) => ({ ...prevState, [target.name]: target.value }));
         }
     };
-
+console.log(orderData);
     const validate = () => {
+        console.log("OrderData", orderData);
         const errors = validator(orderData, validatorConfig);
         setErrors(errors);
         return Object.keys(errors).length === 0;
