@@ -82,7 +82,7 @@ const PrivateOffice = () => {
                         <h1 >Личный кабинет</h1>
                         <div>
                             <button onClick={heandlerEditItem} className={styles.tableItem_editBtn}><img src={editIcon} alt="editIcon" /></button>
-                            {!disabledItem ? <button onClick={() => dispatch(updateUser(personalData))} className={styles.tableItem_updateBtn}><img src={updateIcon} alt="update" /></button> : null}
+                            {!disabledItem ? <button onClick={() => [dispatch(updateUser(personalData)), setDisabledItem(true)]} className={styles.tableItem_updateBtn}><img src={updateIcon} alt="update" /></button> : null}
                         </div>
                     </div>
 
