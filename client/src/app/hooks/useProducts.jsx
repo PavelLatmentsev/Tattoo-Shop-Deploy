@@ -30,7 +30,7 @@ export const ProductsProvider = ({ children }) => {
     const [count, setCount] = useState(products.length);
     const [defaultState, setDefaultState] = useState(initialState);
     const [error, setError] = useState(null);
-
+console.log(products);
     useEffect(() => {
         getProducts();
         setCount(products.length);
